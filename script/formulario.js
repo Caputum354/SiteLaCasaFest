@@ -1,11 +1,10 @@
-
-       /* INTEGRAÇÃO COM A API (POST /api/orcamentos — sem token) */
+/* INTEGRAÇÃO COM A API (POST /api/orcamentos — sem token) */
       
       (function () {
         "use strict";
 
-        // >>> ALTERE EM PRODUÇÃO <<<
-        const API_BASE = "http://localhost:8080/api/orcamentos";
+        // API pública de produção no Render.
+        const API_BASE = "https://backend-olfs.onrender.com/api/orcamentos";
 
         const form = document.getElementById("orcamentoForm");
         const formError = document.getElementById("formError");
