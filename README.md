@@ -243,7 +243,3 @@ Trabalho final do curso de Web Design Front End — SENAI Frederico Jacob.
 ## Observação final
 
 Este repositório representa mais do que um site estático: é um projeto de branding digital, apresentação de espaço e conversão de leads para um negócio de eventos. O conjunto de páginas, recursos visuais e integrações foi pensado para entregar uma experiência profissional e funcional para clientes e visitantes.
-
----
-
-Se quiser, posso também criar uma versão ainda mais elegante do README em formato de apresentação para GitHub, com badges, screenshots e instruções mais visualmente fortes.
