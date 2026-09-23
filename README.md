@@ -1,251 +1,249 @@
-La Casa Fest
+# La Casa Fest
 
-Site institucional desenvolvido como projeto final do curso de Web Design Front End do SENAI Frederico Jacob.
+Site institucional desenvolvido como projeto final do curso de Web Design Front End do SENAI Frederico Jacob, com foco na apresentação de um espaço para eventos, locações e experiências culturais em Ferraz de Vasconcelos, SP.
 
-O projeto apresenta a La Casa Fest, um espaço voltado para eventos e locações, com foco em uma experiência visual moderna, navegação simples e apresentação dos serviços, estrutura e possibilidades do espaço.
+O projeto foi pensado como uma vitrine digital profissional para a La Casa Fest, combinando identidade visual premium, navegação intuitiva, elementos interativos e comunicação direta com clientes por meio de formulários e WhatsApp.
 
-✨ Sobre o projeto
+## Visão geral
 
-O site foi desenvolvido para funcionar como uma vitrine digital da La Casa Fest. A proposta combina um visual elegante com recursos interativos para apresentar o espaço e facilitar o contato de pessoas interessadas em realizar eventos.
+A La Casa Fest é um espaço voltado para experiências de lazer, celebrações e eventos. O site foi criado para transmitir essa proposta de forma moderna e envolvente, permitindo que visitantes:
 
-Entre os principais recursos estão:
+- conheçam a casa e o ambiente;
+- vejam a programação e os momentos realizados no espaço;
+- entendam as possibilidades de locação para festas e eventos;
+- solicitem orçamento diretamente pela web;
+- entrem em contato rapidamente pelo WhatsApp.
 
-Página inicial com apresentação da La Casa Fest;
+## Objetivo do projeto
 
-Seção de locações e informações sobre o espaço;
+O principal objetivo foi desenvolver um site comercial e visualmente impactante, com foco em:
 
-Página de programação;
+- branding e apresentação do espaço;
+- experiência de navegação em múltiplas páginas;
+- storytelling do ambiente e da atmosfera da casa;
+- geração de leads por meio de formulário de orçamento;
+- uso de recursos visuais e interativos para reforçar a proposta da marca.
 
-Galeria com imagens e vídeos;
+## Funcionalidades principais
 
-Carrossel de conteúdo com movimento contínuo;
+### 1. Página inicial
+A home apresenta a identidade da marca com:
 
-Animações de entrada durante a rolagem da página;
+- vídeo de destaque em hero section;
+- navegação principal para programação, locações e orçamento;
+- blocos de apresentação do espaço e dos tipos de experiência;
+- galeria estilo feed com vídeos e carrossel;
+- links para redes sociais e contato.
 
-Formulário para solicitação de orçamento;
+### 2. Página de programação
+A página de programação comunica o clima da casa e mostra o tipo de experiência oferecida, com destaque para:
 
-Validação de dados no formulário;
+- eventos e encontros musicais;
+- resenhas e momentos especiais;
+- identidade e ambiente da marca;
+- navegação para outras páginas do site.
 
-Máscara para telefone;
+### 3. Página de locações
+Essa área explica como o espaço funciona para eventos privados e sociais, com foco em:
 
-Consulta de datas já reservadas através de API;
+- organização do processo de locação;
+- apresentação dos momentos de festa (dia e noite);
+- comunicação clara de como reservar e contratar o espaço;
+- integração com a página de orçamento.
 
-Integração do formulário com uma API de orçamentos;
+### 4. Formulário de orçamento
+O formulário foi pensado para captar oportunidades de negócio diretamente do site. Ele coleta:
 
-Geração de link para contato via WhatsApp após o envio;
+- nome do cliente;
+- telefone/WhatsApp;
+- tipo de evento;
+- quantidade de convidados;
+- data do evento;
+- mensagem complementar.
 
-Tratamento de erros e respostas da API.
+Além disso, o front-end valida:
 
-🛠️ Tecnologias utilizadas
+- campos obrigatórios;
+- quantidade mínima de convidados;
+- data não pode estar no passado;
+- telefone em formato válido;
+- bloqueio de datas já reservadas;
+- mensagens e respostas de erro amigáveis.
 
-Front-end
+### 5. Integração de dados e marcação de datas
+O projeto inclui integração com API externa para:
 
-HTML5 — estrutura e organização das páginas;
+- consultar datas bloqueadas;
+- enviar orçamento para backend;
+- impedir reservas duplicadas;
+- devolver resposta ao cliente com feedback visual.
 
-CSS3 — estilização, layout, tipografia, animações e efeitos visuais;
+### 6. Carrossel e interações visuais
+O site utiliza JavaScript para criar experiência dinâmica, com:
 
-JavaScript — interações, validações, carrossel, animações e integração com API.
+- carrossel infinito de conteúdo;
+- reprodução automática de vídeos visíveis;
+- lazy loading para otimizar performance;
+- arraste com mouse e interação manual;
+- animações ao rolar a página;
+- reveals com IntersectionObserver.
 
-Integração
+## Tecnologias utilizadas
 
-O formulário de orçamento utiliza JavaScript com Fetch API para se comunicar com um back-end externo.
+### Front-end
+- HTML5 — estrutura das páginas e semântica do conteúdo;
+- CSS3 — layout, responsividade, tipografia, paleta visual, microinterações e animações;
+- JavaScript — interações, validações, carrossel, efeitos e integrações.
 
-A aplicação realiza:
+### Integrações
+- Fetch API — comunicação com backend para envio e consulta de dados;
+- API externa para orçamentos e datas bloqueadas.
 
-GET  /api/orcamentos/datas-bloqueadas
-POST /api/orcamentos
+## Estrutura do projeto
 
-A consulta GET permite verificar datas que já possuem reservas.
-
-O POST envia os dados preenchidos pelo usuário para a API.
-
-📁 Estrutura do projeto
-
+```text
 SiteLaCasaFest/
-│
 ├── index.html
 ├── programacao.html
 ├── locacoes.html
 ├── formulario.html
 ├── style.css
-│
 ├── script/
 │   ├── carrossel.js
 │   ├── formulario.js
 │   ├── orcamento-api.js
 │   ├── programacao.js
 │   └── reveal.js
-│
 ├── imagens/
-│   ├── logoLaCasa.png
-│   ├── ... imagens do projeto
-│   └── ... vídeos
-│
-└── midia/
-    └── ... vídeos utilizados no site
+│   ├── logo e ícones da marca
+│   ├── imagens do espaço
+│   └── conteúdos visuais do projeto
+├── midia/
+│   └── vídeos e animações utilizados na interface
+├── README.md
+└── ...
+```
 
-🎞️ Carrossel infinito
+## Arquivos principais
 
-O arquivo script/carrossel.js controla o carrossel de conteúdos da página.
+### `index.html`
+Página inicial do site, com hero, navegação, galeria e apresentação visual da marca.
 
-Ele foi desenvolvido para manter o movimento contínuo dos cards, criando um efeito de rolagem infinita.
+### `programacao.html`
+Página dedicada à programação e ao clima do espaço.
 
-O script também trabalha com:
+### `locacoes.html`
+Apresenta as possibilidades de locação do ambiente e os momentos de uso.
 
-Clonagem automática dos cards;
+### `formulario.html`
+Formulário de orçamento com interface de coleta de dados e resposta visual.
 
-Cálculo do tamanho do ciclo;
+### `style.css`
+Arquivo central de estilos do site, com a identidade visual, responsividade e componentes do layout.
 
-Movimento usando requestAnimationFrame;
+### `script/carrossel.js`
+Controla o carrossel de conteúdo e as interações de mídia, incluindo comportamento infinito.
 
-Arraste com mouse ou ponteiro;
+### `script/reveal.js`
+Aplica animações de entrada conforme os elementos entram na área visível da página.
 
-Pausa durante interação;
+### `script/formulario.js`
+Gerencia validações do formulário, máscara de telefone, bloqueio de datas e envio de dados.
 
-Prevenção de clique acidental após arrastar;
+### `script/orcamento-api.js`
+Arquivo de integração com a API do orçamento, incluindo consulta de datas reservadas e envio do pedido.
 
-Reprodução otimizada dos vídeos visíveis;
+### `script/programacao.js`
+Script relacionado à página de programação e interações da área de agenda.
 
-Lazy loading de conteúdo de mídia.
+## Fluxo de funcionamento do formulário
 
-A velocidade principal do carrossel pode ser ajustada diretamente no JavaScript:
+1. O usuário acessa a página de orçamento.
+2. Preenche nome, telefone, tipo de evento, convidados, data e mensagem.
+3. O front-end valida as informações localmente.
+4. O sistema consulta as datas bloqueadas na API.
+5. Caso a data esteja disponível, o formulário é enviado.
+6. O backend responde com sucesso ou erro.
+7. Em caso de sucesso, o usuário recebe confirmação visual e um link para WhatsApp.
 
-const VELOCIDADE = 40;
-const SENTIDO = -1;
+## API utilizada
 
-✨ Animações de entrada
+O projeto utiliza uma integração com backend para orçamentos e datas bloqueadas. Em termos funcionais, o front-end realiza:
 
-O arquivo script/reveal.js utiliza IntersectionObserver para identificar quando elementos entram na área visível da página.
+- GET para consultar datas já reservadas;
+- POST para enviar uma solicitação de orçamento.
 
-Quando isso acontece, a classe:
+Exemplo da lógica de comunicação:
 
-.is-visible
-
-é adicionada ao elemento.
-
-O sistema suporta diferentes classes de animação:
-
-.reveal
-.reveal-left
-.reveal-right
-.reveal-scale
-
-Isso permite criar efeitos de entrada sem precisar controlar manualmente a animação durante o scroll.
-
-📝 Formulário de orçamento
-
-O formulário coleta informações necessárias para uma solicitação de orçamento, como:
-
-Nome;
-
-Telefone;
-
-Tipo de evento;
-
-Data do evento;
-
-Quantidade de convidados;
-
-Mensagem adicional.
-
-Antes do envio, o JavaScript realiza validações básicas, incluindo:
-
-Campos obrigatórios;
-
-Quantidade mínima de convidados;
-
-Data não pode estar no passado;
-
-Verificação de datas já reservadas;
-
-Validação do telefone.
-
-Durante o envio, o botão é desabilitado e apresenta o estado de carregamento.
-
-Em caso de sucesso, o formulário é ocultado e uma tela de confirmação é exibida, podendo disponibilizar um link para contato via WhatsApp.
-
-🔌 Comunicação com a API
-
-A integração é feita utilizando fetch().
-
-Exemplo simplificado:
-
+```javascript
 const res = await fetch(API_BASE, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(payload)
 });
+```
 
-O código também trata diferentes respostas do servidor, incluindo:
+A aplicação também trata cenários como:
 
-400 — dados inválidos;
+- 400 — dados inválidos;
+- 409 — data já reservada;
+- 429 — excesso de requisições;
+- falhas gerais de conexão ou servidor.
 
-409 — data já reservada;
+## Como executar localmente
 
-429 — excesso de solicitações;
+Como é um projeto front-end, o site pode ser executado em qualquer servidor local simples.
 
-Outros erros de comunicação ou servidor.
+### Opção recomendada: VS Code + Live Server
 
-Atualmente, a integração pública utiliza a API configurada em:
+1. Clone o repositório.
+2. Abra a pasta no VS Code.
+3. Inicie o projeto com Live Server ou outro servidor local.
+4. Acesse a página inicial em `index.html`.
 
-const API_BASE = "https://backend-olfs.onrender.com/api/orcamentos";
+### Observação importante
 
-🎨 Design
+O formulário de orçamento depende da disponibilidade da API externa configurada no projeto. Se a API estiver indisponível, as funções de consulta de datas e envio de solicitações podem falhar.
 
-O projeto utiliza uma identidade visual voltada para eventos e entretenimento, combinando:
+## Design e identidade visual
 
-Tipografia de destaque;
+O projeto possui uma identidade visual marcante, com:
 
-Contrastes fortes;
+- fundo escuro para valorizar elementos luminosos;
+- tipografia forte e impactante;
+- contraste entre elementos dourados, claros e escuros;
+- uso de vídeo, imagens e mídia para reforçar a atmosfera do evento;
+- layout pensado para transmitir luxo, energia e experiências memoráveis.
 
-Elementos dourados;
+## Diferenciais do projeto
 
-Fundo escuro;
+- interface comercial e profissional;
+- experiência visual moderna e envolvente;
+- arquitetura organizada em HTML, CSS e JavaScript;
+- foco em conversão para reservas e contato;
+- presença digital forte para marca e espaço de eventos.
 
-Imagens e vídeos para destacar o espaço;
+## Status
 
-Microinterações e animações.
+Projeto finalizado como entrega acadêmica, com foco em apresentação visual, usabilidade e comunicação comercial do espaço La Casa Fest.
 
-O CSS central do projeto está no arquivo:
+## Créditos
 
-style.css
+Projeto desenvolvido por:
 
-🚀 Como executar
+- Ítalo Moreno
+- Kaio Oliveira
+- Juan Carlos
+- Gabriel Soares
+- Jeferson Junior
+- Isaac Peres
 
-Por ser um projeto front-end, os arquivos podem ser executados localmente utilizando um servidor web.
+Trabalho final do curso de Web Design Front End — SENAI Frederico Jacob.
 
-Uma opção simples é utilizar a extensão Live Server no VS Code.
+## Observação final
 
-Clone o repositório;
+Este repositório representa mais do que um site estático: é um projeto de branding digital, apresentação de espaço e conversão de leads para um negócio de eventos. O conjunto de páginas, recursos visuais e integrações foi pensado para entregar uma experiência profissional e funcional para clientes e visitantes.
 
-Abra a pasta no VS Code;
+---
 
-Inicie um servidor local;
-
-Abra index.html.
-
-O formulário de orçamento depende da API configurada em script/formulario.js. Caso a API não esteja disponível, as funções que dependem do back-end não funcionarão corretamente.
-
-📌 Observações
-
-O projeto contém uma integração front-end com uma API externa para gerenciamento das solicitações de orçamento e consulta de datas reservadas.
-
-A estrutura foi organizada separando:
-
-Estrutura (HTML);
-
-Estilos (CSS);
-
-Comportamentos e integrações (JavaScript);
-
-Imagens e vídeos (imagens/ e midia/).
-
-👨‍💻 Autores
-
-Ítalo Moreno
-
-Projeto desenvolvido como trabalho final do curso de Web Design Front End — SENAI Frederico Jacob.
-
-⭐ Se este projeto foi útil ou interessante para você, considere deixar uma estrela no repositório.
+Se quiser, posso também criar uma versão ainda mais elegante do README em formato de apresentação para GitHub, com badges, screenshots e instruções mais visualmente fortes.
